@@ -16,5 +16,6 @@ jobs:
           client-payload: >-
             {
               "project": "mi17_sm8850",
-              "branch": "${{ github.ref_name }}"
+              "branch": "${{ github.ref_name }}",
+              "apply_bbg": "true"
             }
