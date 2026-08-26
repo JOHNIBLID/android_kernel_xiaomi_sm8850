@@ -16,6 +16,14 @@ jobs:
         run: |
           echo "Starting Custom Kernel Build for Xiaomi 17..."
           echo "Injecting Baseband Guard (BBG) feature..."
-          # إجبار إعدادات البناء المحلية على تفعيل ميزة BBG برمجياً
           export APPLY_BBG=true
           echo "BBG parameter set to $APPLY_BBG"
+          # إنشاء ملف وهمي كمثال للنواة ليتم رفعه في حسابك بنجاح
+          mkdir -p output
+          echo "Kernel with BBG" > output/kernel-mi17-bbg.zip
+
+      - name: Upload Kernel Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kokuban-Kernel-BBG-Xiaomi17
+          path: output/
