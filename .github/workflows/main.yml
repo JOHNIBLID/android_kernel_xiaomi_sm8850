@@ -13,9 +13,4 @@ jobs:
           repository: YuzakiKokuban/Kokuban_Kernel_CI_Center
           token: ${{ secrets.CI_TOKEN }}
           event-type: build-kernel
-          client-payload: >-
-            {
-              "project": "mi17_sm8850",
-              "branch": "${{ github.ref_name }}",
-              "apply_bbg": "true"
-            }
+          client-payload: '{"project": "mi17_sm8850", "branch": "${{ github.ref_name }}", "apply_bbg": "true"}'
